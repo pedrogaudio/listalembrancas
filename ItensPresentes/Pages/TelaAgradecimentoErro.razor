@@ -1,0 +1,25 @@
+﻿@page "/TelaAgradecimentoErro/{nomePresenteador}"
+
+<h3>Obrigado!</h3>
+<br />
+<br />
+<p>Oi, @nomePresenteador, agradecemos muito pela sua disponibilidade em compartilhar esse momento conosco!</p>
+<br />
+<p>Infelizmente não conseguimos registrar o seu presente, mas fique tranquilo, pode nos procurar que fazemos por você.</p>
+<br />
+<p>Te esperamos no dia 16/12/2023 às 15:00.</p>
+<br />
+<p>Avenida Rudge Ramos, 1174 - São Bernardo do Campo, SP</p>
+<br />
+<p>Pedro, Raiany, Isabella e Giovanna.</p>
+
+
+@code {
+    [Parameter]
+    public string nomePresenteador { get; set; }
+
+    protected override void OnInitialized()
+    {
+        // O valor do parâmetro 'nomePresenteador' é automaticamente vinculado à propriedade
+    }
+}

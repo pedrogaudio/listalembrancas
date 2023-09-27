@@ -1,0 +1,83 @@
+﻿@page "/listapresentes"
+@using ItensPresentes.Services;
+@using Supabase;
+@using System.Collections.Generic;
+@using ItensPresentes.Data;
+@inject ISupabaseService SupabaseService
+
+<h3>Lista de Lembranças Open House</h3>
+<br />
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td>Nro.</td>
+                            <th>Item</th>
+                            <th>Quantidade</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (itensDeCasa == null)
+                        {
+                            <tr><td><em>Carregando ...</em></td></tr>
+                        }
+                        else
+                            foreach (var item in itensDeCasa)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.NomeItem</td>
+                                    <td>@item.Quantidade</td>
+                                    <td><button type="button" class="btn btn-info btn-sm" @onclick="() => OpenPresenteDialog(item)">Presentear</button></td>
+                                </tr>
+                            }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+    </div>
+</div>
+@if (DeleteDialogOpen)
+{
+    <ModalDialog Title="Lembrança" OnClose="@OnPresentDialogClose" ItemDeCasa="@_itemDeCasaUpdate"> </ModalDialog>
+}
+
+@code {
+
+    private List<ItemDeCasa> itensDeCasa;
+    private bool modalVisivel = false;
+    private string nomePresenteador;
+    public bool DeleteDialogOpen { get; set; }
+    private ItemDeCasa _itemDeCasaUpdate { get; set; }
+
+    private void OnPresentDialogClose(bool accepted)
+    {
+        DeleteDialogOpen = false;
+        StateHasChanged();
+    }
+
+    private void OpenPresenteDialog(ItemDeCasa item)
+    {
+        DeleteDialogOpen = true;
+        _itemDeCasaUpdate = item;
+        StateHasChanged();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await SupabaseService.InitializeAsync();
+        await CarregarListas();
+    }
+
+    private async Task CarregarListas()
+    {
+        itensDeCasa = await SupabaseService.GetItensDeCasaAsync();
+        StateHasChanged();
+    }
+}

@@ -1,0 +1,64 @@
+﻿@using ItensPresentes.Data;
+@using ItensPresentes.Services;
+@inject ISupabaseService SupabaseService
+@inject Microsoft.AspNetCore.Components.NavigationManager NavigationManager
+
+<div class="modal fade show" id="myModal" style="display:block" aria-modal="true" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@Title</h5>
+                <button type="button" class="close" @onclick="@ModalCancel">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Para presentear com a opção <strong>@ItemDeCasa.NomeItem</strong>, insira o seu nome abaixo:</p>
+                <div class="form-group">
+                    <label for="nomePresenteador">Nome:</label>
+                    <input type="text" id="nomePresenteador" class="form-control" @bind="nomePresenteador" placeholder="Digite seu nome" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" @onclick="@ModalOk">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> OnClose { get; set; }
+
+    [Parameter]
+    public ItemDeCasa ItemDeCasa { get; set; }
+
+    private string nomePresenteador { get; set; }
+
+    private Task ModalCancel()
+    {
+        return OnClose.InvokeAsync(false);
+    }
+
+    private async Task ModalOk()
+    {
+        List<string> pessoas = new List<string>();
+        pessoas.Add(nomePresenteador);
+        ItemDeCasa.NomePessoas = pessoas;
+        bool sucesso = await SupabaseService.UpdateItemDeCasa(ItemDeCasa);
+
+        // Verifique o resultado
+        if (sucesso)
+        {
+            NavigationManager.NavigateTo($"/TelaAgradecimento/{nomePresenteador}");
+        }
+        else
+        {
+            NavigationManager.NavigateTo($"/TelaAgradecimentoErro/{ItemDeCasa.Id}"); ;
+        }
+    }
+}
