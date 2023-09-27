@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ItensPresentes\\ItensPresentes\\ItensPresentes.csproj": {}
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\ItensPresentes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ItensPresentes\\ItensPresentes\\ItensPresentes.csproj": {
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\ItensPresentes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ItensPresentes\\ItensPresentes\\ItensPresentes.csproj",
+        "projectUniqueName": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\ItensPresentes.csproj",
         "projectName": "ItensPresentes",
-        "projectPath": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ItensPresentes\\ItensPresentes\\ItensPresentes.csproj",
+        "projectPath": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\ItensPresentes.csproj",
         "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ItensPresentes\\ItensPresentes\\obj\\",
+        "outputPath": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -41,8 +41,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Npgsql": {
               "target": "Package",
