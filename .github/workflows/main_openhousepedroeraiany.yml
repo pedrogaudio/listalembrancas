@@ -5,6 +5,8 @@ name: Build and deploy ASP.Net Core app to Azure Web App - OpenHousePedroERaiany
 
 on:
   pull_request:
+    types:      
+      - closed
     branches:
       - main
   workflow_dispatch:
