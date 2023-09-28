@@ -16,8 +16,6 @@ namespace ItensPresentes.Data
         public string NomeItem { get; set; }
         [Column("nome_pessoas")]
         public List<string> NomePessoas { get; set; }
-        [Column("ativo")]
-        public bool Ativo { get; set; }
 
     }
 }

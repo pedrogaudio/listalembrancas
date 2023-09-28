@@ -1,5 +1,32 @@
-﻿<div class="alert alert-secondary mt-16 text-center">
-    <div class="container-frame">
-        <iframe src="/html/convite.html" frameborder="0"></iframe>
+﻿<div class="alert alert-secondary mt-4">
+    <div class="d-flex align-items-center justify-content-center">
+        <span class="oi me-2" aria-hidden="true"></span>
+        <strong style="font-size: 30px;">@Title</strong>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="alert alert-secondary mt-4">
+                <img src="/img/convite.jpg" alt="Convite" class="img-fluid" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="alert alert-secondary mt-4">
+                <p>No dia 16 de dezembro de 2023, marcamos um momento especial em nossas vidas.</p>
+                <p>Estamos ansiosos para celebrar a nossa mais recente conquista, a nossa nova moradia, com todos aqueles que têm um lugar especial em nossos corações.</p>
+                <p>É com grande alegria que convidamos você a se juntar a nós em nosso Open House! </p>
+                <p>Sabemos que é o amor e o apoio da família e dos amigos que tornam cada passo dessa jornada significativo. Como tal, gostaríamos de compartilhar este dia com você e criar memórias que perdurarão para sempre. </p>
+                <p>Como uma forma de agradecer por fazer parte deste capítulo importante de nossas vidas, preparamos algumas sugestões de lembranças que gostaríamos de compartilhar:</p>
+                <p>1. Sorrisos e Conversas: Sua presença é o maior presente que poderíamos receber. Nossa casa estará aberta para risadas, conversas e momentos especiais. Traga sua alegria e suas histórias para tornar este dia ainda mais inesquecível. </p>
+                <p>2. Desejos e Boas Vibrações: Em vez de presentes materiais, valorizamos seus bons desejos e energias positivas. Sua bênção é o que realmente enriquece nossa nova jornada juntos. </p>
+                <p>3. Memórias Compartilhadas: Se você desejar, traga uma foto ou um pequeno item que represente uma memória especial que compartilhamos. Vamos criar um espaço de memórias para relembrar os momentos incríveis que tivemos juntos. </p>
+                <p>Estamos ansiosos para receber você em nossa casa neste dia especial. Sua presença tornará nosso Open House ainda mais significativo e memorável. Por favor, confirme sua presença para que possamos garantir que todos se sintam bem-vindos e confortáveis. </p>
+                <p>Agradecemos por compartilhar este momento único conosco e por fazer parte das nossas vidas. Mal podemos esperar para criar novas memórias e celebrar juntos. Até lá, com amor e gratidão. </p>
+            </div>
+        </div>
     </div>
 </div>
+
+@code {
+    [Parameter]
+    public string? Title { get; set; }
+}

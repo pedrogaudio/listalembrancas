@@ -16,6 +16,7 @@
                         <tr>
                             <td>Nro.</td>
                             <th>Item</th>
+                            <th>Quantidade</th>
                             <th>&nbsp;</th>
                         </tr>
                     </thead>
@@ -30,6 +31,7 @@
                                 <tr>
                                     <td>@item.Id</td>
                                     <td>@item.NomeItem</td>
+                                    <td>@item.Quantidade</td>
                                     <td><button type="button" class="btn btn-info btn-sm" @onclick="() => OpenPresenteDialog(item)">Presentear</button></td>
                                 </tr>
                             }
