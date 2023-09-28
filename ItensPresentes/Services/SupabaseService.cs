@@ -33,7 +33,7 @@ namespace ItensPresentes.Services
 
         public async Task<List<ItemDeCasa>> GetItensDeCasaAsync()
         {
-            var result = await _supabase.From<ItemDeCasa>().Filter("quantidade", Operator.GreaterThan, "0").Get();
+            var result = await _supabase.From<ItemDeCasa>().Filter("ativo", Operator.Equals, "true").Get();
             var response = result.Models.OrderBy(x=> x.Id);
 
             return response.ToList();
@@ -68,6 +68,7 @@ namespace ItensPresentes.Services
                       .Where(x => x.Id == item.Id)
                       .Set(x => x.NomePessoas, pessoas)
                       .Set(x => x.Quantidade, quantidade == 0 ? item.Quantidade : quantidade)
+                      .Set(x => x.Ativo, quantidade == 0 ? false : true)
                       .Update();
 
                 if (update.ResponseMessage.StatusCode == System.Net.HttpStatusCode.OK)
