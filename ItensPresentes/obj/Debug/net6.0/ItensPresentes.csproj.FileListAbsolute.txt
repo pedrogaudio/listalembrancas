@@ -36,8 +36,11 @@ C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\scopedcss\Pages\Convite.razor.rz.scp.css
+C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\scopedcss\Shared\ApresentacaoConvite.razor.rz.scp.css
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\scopedcss\Pages\ItensCasa.razor.rz.scp.css
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\scopedcss\bundle\ItensPresentes.styles.css
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\scopedcss\projectbundle\ItensPresentes.bundle.scp.css
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\ItensPresentes.csproj.CopyComplete
@@ -46,5 +49,3 @@ C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\ItensPresentes.pdb
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\ItensPresentes.genruntimeconfig.cache
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\ref\ItensPresentes.dll
-C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\scopedcss\Shared\ApresentacaoConvite.razor.rz.scp.css
-C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\scopedcss\Pages\Convite.razor.rz.scp.css

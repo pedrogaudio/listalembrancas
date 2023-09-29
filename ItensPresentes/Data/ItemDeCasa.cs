@@ -18,6 +18,8 @@ namespace ItensPresentes.Data
         public List<string> NomePessoas { get; set; }
         [Column("ativo")]
         public bool Ativo { get; set; }
+        [Column("ambiente")]
+        public int Ambiente { get; set; }
 
     }
 }

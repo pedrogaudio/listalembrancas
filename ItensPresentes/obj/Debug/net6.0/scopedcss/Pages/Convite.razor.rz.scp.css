@@ -4,6 +4,7 @@
     padding-bottom: 110px;
     font-size: 55px;
     padding-top: 20px;
+    font-weight: bold;
 }
 
 .nomes-titles[b-pkaclo3485] {
@@ -143,3 +144,49 @@ span[b-pkaclo3485] {
         margin-right: 0;
     }
 }
+
+.wrapper[b-pkaclo3485] {
+    position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+x[b-pkaclo3485] {
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+}
+
+    x span[b-pkaclo3485] {
+        position: relative;
+        z-index: 2;
+    }
+
+    x[b-pkaclo3485]:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #6f42c1;
+        transition: all .35s;
+    }
+
+    x:hover[b-pkaclo3485] {
+        color: #fff;
+    }
+
+        x:hover[b-pkaclo3485]:after {
+            width: 100%;
+        }

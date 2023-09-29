@@ -66,3 +66,19 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+.page-footer {
+    background-color: #94629d61;
+    border-radius: 5px 5px 0px 0px;
+    position: fixed;
+    bottom: 0;
+    color: #8500ac;
+    text-align: center;
+    width: 100%;
+    font-size: smaller;
+    font-style: oblique;
+}
+
+    .page-footer :hover {
+        font-size: larger;
+    }

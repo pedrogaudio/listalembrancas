@@ -1,46 +1,173 @@
 ﻿@page "/listalembrancas"
+@using ItensPresentes.Model;
 @using ItensPresentes.Services;
 @using Supabase;
 @using System.Collections.Generic;
 @using ItensPresentes.Data;
 @inject ISupabaseService SupabaseService
 
-<h3>Lista de Lembranças Open House</h3>
+<h3>Lista de Lembranças</h3>
 <br />
-<div class="row">
-    <div class="col-lg-8">
-        <div class="card">
-            <div class="card-body">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <td>Nro.</td>
-                            <th>Item</th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if (itensDeCasa == null)
-                        {
-                            <tr><td><em>Carregando ...</em></td></tr>
-                        }
-                        else
-                            foreach (var item in itensDeCasa)
-                            {
-                                <tr>
-                                    <td>@item.Id</td>
-                                    <td>@item.NomeItem</td>
-                                    <td><button type="button" class="btn btn-info btn-sm" @onclick="() => OpenPresenteDialog(item)">Presentear</button></td>
-                                </tr>
-                            }
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4">
-    </div>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item" role="cama">
+    <button class="nav-link active" id="pills-cama-tab" data-bs-toggle="pill" data-bs-target="#pills-cama" type="button" role="tab" aria-controls="pills-cama" aria-selected="true">Cama</button>
+  </li>
+  <li class="nav-item" role="mesa">
+    <button class="nav-link" id="pills-mesa-tab" data-bs-toggle="pill" data-bs-target="#pills-mesa" type="button" role="tab" aria-controls="pills-mesa" aria-selected="false">Mesa</button>
+  </li>
+  <li class="nav-item" role="banho">
+    <button class="nav-link" id="pills-banho-tab" data-bs-toggle="pill" data-bs-target="#pills-banho" type="button" role="tab" aria-controls="pills-banho" aria-selected="false">Banho</button>
+  </li>
+    <li class="nav-item" role="eletro">
+    <button class="nav-link" id="pills-eletro-tab" data-bs-toggle="pill" data-bs-target="#pills-eletro" type="button" role="tab" aria-controls="pills-eletro" aria-selected="false">Eletrodomésticos</button>
+  </li>
+    <li class="nav-item" role="cozinha">
+    <button class="nav-link" id="pills-cozinha-tab" data-bs-toggle="pill" data-bs-target="#pills-cozinha" type="button" role="tab" aria-controls="pills-cozinha" aria-selected="false">Cozinha</button>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-cama" role="tabpanel" aria-labelledby="pills-cama-tab"><div class="tab-pane fade show active" id="banheiro" role="tabpanel" aria-labelledby="banheiro-tab">
+                        <table class="table table-striped">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <td>Nro.</td>
+                                        <th>Item</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (itensDeCasa == null)
+                                    {
+                                        <tr><td><em>Carregando ...</em></td></tr>
+                                    }
+                                    else
+                                        foreach (var item in itensDeCasa.Item1)
+                                        {
+                                            <tr>
+                                                <td>@item.Id</td>
+                                                <td>@item.NomeItem</td>
+                                                <td><button type="button" class="btn btn-info btn-sm" @onclick="() => OpenPresenteDialog(item)">Presentear</button></td>
+                                            </tr>
+                                        }
+                                </tbody>
+                            </table>
+                        </table>
+                    </div></div>
+  <div class="tab-pane fade" id="pills-mesa" role="tabpanel" aria-labelledby="pills-mesa-tab"><div class="tab-pane fade show active" id="banheiro" role="tabpanel" aria-labelledby="banheiro-tab">
+                        <table class="table table-striped">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <td>Nro.</td>
+                                        <th>Item</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (itensDeCasa == null)
+                                    {
+                                        <tr><td><em>Carregando ...</em></td></tr>
+                                    }
+                                    else
+                                        foreach (var item in itensDeCasa.Item2)
+                                        {
+                                            <tr>
+                                                <td>@item.Id</td>
+                                                <td>@item.NomeItem</td>
+                                                <td><button type="button" class="btn btn-info btn-sm" @onclick="() => OpenPresenteDialog(item)">Presentear</button></td>
+                                            </tr>
+                                        }
+                                </tbody>
+                            </table>
+                        </table>
+                    </div></div>
+  <div class="tab-pane fade" id="pills-banho" role="tabpanel" aria-labelledby="pills-banho-tab"><div class="tab-pane fade show active" id="banheiro" role="tabpanel" aria-labelledby="banheiro-tab">
+                        <table class="table table-striped">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <td>Nro.</td>
+                                        <th>Item</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (itensDeCasa == null)
+                                    {
+                                        <tr><td><em>Carregando ...</em></td></tr>
+                                    }
+                                    else
+                                        foreach (var item in itensDeCasa.Item3)
+                                        {
+                                            <tr>
+                                                <td>@item.Id</td>
+                                                <td>@item.NomeItem</td>
+                                                <td><button type="button" class="btn btn-info btn-sm" @onclick="() => OpenPresenteDialog(item)">Presentear</button></td>
+                                            </tr>
+                                        }
+                                </tbody>
+                            </table>
+                        </table>
+                    </div></div>
+                      <div class="tab-pane fade" id="pills-eletro" role="tabpanel" aria-labelledby="pills-eletro-tab"><div class="tab-pane fade show active" id="banheiro" role="tabpanel" aria-labelledby="banheiro-tab">
+                        <table class="table table-striped">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <td>Nro.</td>
+                                        <th>Item</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (itensDeCasa == null)
+                                    {
+                                        <tr><td><em>Carregando ...</em></td></tr>
+                                    }
+                                    else
+                                        foreach (var item in itensDeCasa.Item4)
+                                        {
+                                            <tr>
+                                                <td>@item.Id</td>
+                                                <td>@item.NomeItem</td>
+                                                <td><button type="button" class="btn btn-info btn-sm" @onclick="() => OpenPresenteDialog(item)">Presentear</button></td>
+                                            </tr>
+                                        }
+                                </tbody>
+                            </table>
+                        </table>
+                    </div></div>
+                                          <div class="tab-pane fade" id="pills-cozinha" role="tabpanel" aria-labelledby="pills-cozinha-tab"><div class="tab-pane fade show active" id="banheiro" role="tabpanel" aria-labelledby="banheiro-tab">
+                        <table class="table table-striped">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <td>Nro.</td>
+                                        <th>Item</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (itensDeCasa == null)
+                                    {
+                                        <tr><td><em>Carregando ...</em></td></tr>
+                                    }
+                                    else
+                                        foreach (var item in itensDeCasa.Item5)
+                                        {
+                                            <tr>
+                                                <td>@item.Id</td>
+                                                <td>@item.NomeItem</td>
+                                                <td><button type="button" class="btn btn-info btn-sm" @onclick="() => OpenPresenteDialog(item)">Presentear</button></td>
+                                            </tr>
+                                        }
+                                </tbody>
+                            </table>
+                        </table>
+                    </div></div>
 </div>
+
 @if (DeleteDialogOpen)
 {
     <ModalDialog Title="Lembrança" OnClose="@OnPresentDialogClose" ItemDeCasa="@_itemDeCasaUpdate"> </ModalDialog>
@@ -48,11 +175,11 @@
 
 @code {
 
-    private List<ItemDeCasa> itensDeCasa;
+    private Tuple<List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>> itensDeCasa;
     private bool modalVisivel = false;
     private string nomePresenteador;
     public bool DeleteDialogOpen { get; set; }
-    private ItemDeCasa _itemDeCasaUpdate { get; set; }
+    private ItemCasaModel _itemDeCasaUpdate { get; set; }
 
     private void OnPresentDialogClose(bool accepted)
     {
@@ -60,7 +187,7 @@
         StateHasChanged();
     }
 
-    private void OpenPresenteDialog(ItemDeCasa item)
+    private void OpenPresenteDialog(ItemCasaModel item)
     {
         DeleteDialogOpen = true;
         _itemDeCasaUpdate = item;
