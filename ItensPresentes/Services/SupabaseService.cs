@@ -38,9 +38,14 @@ namespace ItensPresentes.Services
             var result = await _supabase.From<ItemDeCasa>().Filter("ativo", Operator.Equals, "true").Get();
             var response = result.Models.OrderBy(x => x.Id);
 
-            var retorno = GetListModelada(response.ToList());
+            var listaModelada = GetListModelada(response.ToList());
+            var camaLista = listaModelada.Item1.OrderBy(x => x.Id).ToList();
+            var mesaLista = listaModelada.Item2.OrderBy(x => x.Id).ToList();
+            var banhoLista = listaModelada.Item3.OrderBy(x => x.Id).ToList();
+            var eletroLista = listaModelada.Item4.OrderBy(x => x.Id).ToList();
+            var cozinhaLista = listaModelada.Item5.OrderBy(x => x.Id).ToList();
 
-            return retorno;
+            return new Tuple<List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>>(camaLista, mesaLista, banhoLista, eletroLista, cozinhaLista);
         }
 
         private Tuple<List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>> GetListModelada(List<ItemDeCasa> itemDeCasas)
@@ -52,30 +57,38 @@ namespace ItensPresentes.Services
             var eletroList = new List<ItemCasaModel>();
             var cozinhaList = new List<ItemCasaModel>();
 
-            int i = 0;
+            int camaInt = 0;
+            int mesaInt = 0;
+            int banhoInt = 0;
+            int eletroInt = 0;
+            int cozinhaInt = 0;
             foreach (var item in itemDeCasas)
             {
                 if (item.Ambiente == 1)
                 {
-                    camaList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = i, NomeItem = item.NomeItem });
+                    camaList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = camaInt, NomeItem = item.NomeItem });
+                    camaInt++;
                 }
                 else if (item.Ambiente == 2)
                 {
-                    mesaList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = i, NomeItem = item.NomeItem });
+                    mesaList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = mesaInt, NomeItem = item.NomeItem });
+                    mesaInt++;
                 }
                 else if (item.Ambiente == 3)
                 {
-                    banhoList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = i, NomeItem = item.NomeItem });
+                    banhoList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = banhoInt, NomeItem = item.NomeItem });
+                    banhoInt++;
                 }
                 else if (item.Ambiente == 4)
                 {
-                    eletroList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = i, NomeItem = item.NomeItem });
+                    eletroList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = eletroInt, NomeItem = item.NomeItem });
+                    eletroInt++;
                 }
                 else if (item.Ambiente == 5)
                 {
-                    cozinhaList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = i, NomeItem = item.NomeItem });
+                    cozinhaList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = cozinhaInt, NomeItem = item.NomeItem });
+                    cozinhaInt++;
                 }
-                i++;
             }
             // Crie e retorne a tupla com as listas preenchidas
             var tuple = new Tuple<List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>>(
