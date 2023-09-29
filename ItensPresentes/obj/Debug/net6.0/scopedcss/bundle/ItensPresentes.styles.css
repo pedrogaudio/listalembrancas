@@ -138,7 +138,7 @@ span[b-pkaclo3485] {
     }
 
     .nomes-titles[b-pkaclo3485] {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .principal-text[b-pkaclo3485] {
@@ -147,11 +147,11 @@ span[b-pkaclo3485] {
     }
 
     .O[b-pkaclo3485] {
-        transform: translate(23px, 99px) rotate(337deg);
+        transform: translate(23px, 85px) rotate(337deg);
     }
 
     .p1[b-pkaclo3485] {
-        transform: translate(13px, 68px) rotate(339deg);
+        transform: translate(13px, 66px) rotate(339deg);
     }
 
     .e[b-pkaclo3485] {
@@ -159,7 +159,28 @@ span[b-pkaclo3485] {
     }
 
     .n[b-pkaclo3485] {
-        transform: translate(2px, 46px) rotate(353deg);
+        transform: translate(5px, 48px) rotate(353deg);
+    }
+
+
+    .h[b-pkaclo3485] {
+        transform: translate(4px, 50px) rotate(0deg);
+    }
+
+    .o2[b-pkaclo3485] {
+        transform: translate(2px, 51px) rotate(5deg);
+    }
+
+    .u[b-pkaclo3485] {
+        transform: translate(-3px, 57px) rotate(20deg);
+    }
+
+    .s[b-pkaclo3485] {
+        transform: translate(-8px, 67px) rotate(25deg);
+    }
+
+    .e2[b-pkaclo3485] {
+        transform: translate(-15px, 80px) rotate(33deg);
     }
 }
 
