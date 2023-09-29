@@ -31,18 +31,7 @@ th, td {
 
 th {
     color: #000000;
-    font-weight: bold; 
-}
-
-/* Estilo para o dia 16 */
-.heart {
-    font-size: 14px;
     font-weight: bold;
-    background-image: url('/img/coracao.png'); /* Substitua 'caminho-para-sua-imagem.jpg' pelo caminho correto para sua imagem de fundo */
-    background-size: 37px 38px;
-    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
-    background-position: 5px -5px;
-    font-family: 'Luckiest Guy', cursive;
 }
 
 .paragraph {
@@ -53,4 +42,28 @@ th {
     margin: 0 auto;
     padding: 20px;
     border-radius: 70px;
+}
+
+.heart {
+    font-size: 14px;
+    font-weight: bold;
+    background-image: url('/img/coracao.png');
+    background-size: 37px 38px;
+    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
+    background-position: 5px -5px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+@media (max-width: 358px) {
+    .heart {
+        background-size: 37px 36px;
+        background-position: -2px -3px;
+    }
+}
+
+@media (min-width: 359px) and (max-width: 600px) {
+    .heart {
+        background-size: 39px 37px;
+        background-position: 5px -3px;
+    }
 }

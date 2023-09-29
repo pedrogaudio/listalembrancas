@@ -68,3 +68,19 @@ main {
         padding-right: 1.5rem !important;
     }
 }
+
+.page-footer {
+    background-color: #94629d61;
+    border-radius: 5px 5px 0px 0px;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: smaller;
+    font-style: oblique;
+}
+
+    .page-footer :hover {
+        font-size: larger;
+    }
