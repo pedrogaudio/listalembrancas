@@ -5,6 +5,7 @@
     padding-bottom: 110px;
     font-size: 55px;
     padding-top: 20px;
+    font-weight: bold;
 }
 
 .nomes-titles[b-pkaclo3485] {
@@ -144,6 +145,66 @@ span[b-pkaclo3485] {
         margin-right: 0;
     }
 }
+
+.wrapper[b-pkaclo3485] {
+    position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+x[b-pkaclo3485] {
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+}
+
+    x span[b-pkaclo3485] {
+        position: relative;
+        z-index: 2;
+    }
+
+    x[b-pkaclo3485]:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #6f42c1;
+        transition: all .35s;
+    }
+
+    x:hover[b-pkaclo3485] {
+        color: #fff;
+    }
+
+        x:hover[b-pkaclo3485]:after {
+            width: 100%;
+        }
+/* _content/ItensPresentes/Pages/ItensCasa.razor.rz.scp.css */
+.section[b-ghefgpor2t] {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.section h3[b-ghefgpor2t] {
+    margin-top: 0;
+}
+
+.nav-link[b-ghefgpor2t] {
+    cursor: pointer;
+}
 /* _content/ItensPresentes/Shared/ApresentacaoConvite.razor.rz.scp.css */
 #framePrincipal[b-rtkrky9yme] {
     border: none;
@@ -231,7 +292,7 @@ main[b-ud96hfu3o9] {
     border-radius: 5px 5px 0px 0px;
     position: fixed;
     bottom: 0;
-    color: white;
+    color: #8500ac;
     text-align: center;
     width: 100%;
     font-size: smaller;
