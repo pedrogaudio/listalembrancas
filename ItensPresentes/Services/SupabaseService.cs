@@ -128,7 +128,6 @@ namespace ItensPresentes.Services
                       .Set(x => x.NomePessoas, pessoas)
                       .Set(x => x.Quantidade, quantidade)
                       .Set(x => x.Ativo, quantidade == 0 ? false : true)
-                      .Set(x => x.Quantidade, quantidade)
                       .Update();
 
                 if (update.ResponseMessage.StatusCode == System.Net.HttpStatusCode.OK)
