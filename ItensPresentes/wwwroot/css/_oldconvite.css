@@ -1,0 +1,157 @@
+﻿body {
+    background-image: url('/img/background_convite.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin-top: -73px;
+}
+
+.container {
+    text-align: center;
+    padding: 10px;
+    max-height: 80vh; /* Defina uma altura máxima em relação à altura da viewport (80% da altura da viewport) */
+    overflow: auto; /* Adicione uma barra de rolagem se o conteúdo exceder a altura máxima */
+}
+
+.curved-title {
+    text-align: center;
+    padding-bottom: 110px;
+    font-size: 55px;
+    padding-top: 20px;
+}
+
+.nomes-titles {
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 90px;
+    font-size: x-large;
+}
+
+.principal-text {
+    margin-top: -70px;
+    margin-bottom: 125px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
+}
+
+.O {
+    transform: translate(20px, 85px) rotate(325deg);
+}
+
+.p {
+    transform: translate(13px, 68px) rotate(339deg);
+}
+
+.e {
+    transform: translate(8px, 58px) rotate(343deg);
+}
+
+.n {
+    transform: translate(2px, 52px) rotate(353deg);
+}
+
+.space {
+    transform: translate(2px, 14px) rotate(-10deg);
+}
+
+.h {
+    transform: translate(4px, 50px) rotate(0deg);
+}
+
+.o2 {
+    transform: translate(2px, 51px) rotate(5deg);
+}
+
+.u {
+    transform: translate(-2px, 58px) rotate(16deg);
+}
+
+.s {
+    transform: translate(-8px, 70px) rotate(22deg);
+}
+
+.e2 {
+    transform: translate(-17px, 83px) rotate(30deg);
+}
+
+span {
+    display: inline-block;
+}
+
+
+@media (max-width: 550px) {
+    .curved-title {
+        font-size: 45px;
+    }
+
+    .nomes-titles {
+        font-size: 35px;
+    }
+
+    .principal-text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 446px) {
+    .curved-title {
+        font-size: 37px;
+    }
+
+    .nomes-titles {
+        font-size: 30px;
+    }
+
+    .principal-text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 379px) {
+    .curved-title {
+        font-size: 32px;
+    }
+
+    .nomes-titles {
+        font-size: 26px;
+    }
+
+    .principal-text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 704px) and (max-width: 800px) {
+    .curved-title {
+        font-size: 44px;
+    }
+
+    .nomes-titles {
+        font-size: 34px;
+    }
+
+    .principal-text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+@media (min-width: 640px) and (max-width: 704px) {
+    .curved-title {
+        font-size: 36px;
+    }
+
+    .nomes-titles {
+        font-size: 30px;
+    }
+
+    .principal-text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

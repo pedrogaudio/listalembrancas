@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\ItensPresentes.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\css\\_oldconvite.css",
+      "PackagePath": "staticwebassets\\css\\_oldconvite.css"
+    },
+    {
       "Id": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
       "Id": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\css\\calendario.css",
+      "PackagePath": "staticwebassets\\css\\calendario.css"
     },
     {
       "Id": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
@@ -57,8 +65,24 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\html\\_oldconvite.html",
+      "PackagePath": "staticwebassets\\html\\_oldconvite.html"
+    },
+    {
+      "Id": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\html\\calendario.html",
+      "PackagePath": "staticwebassets\\html\\calendario.html"
+    },
+    {
+      "Id": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\img\\background_convite.jpg",
+      "PackagePath": "staticwebassets\\img\\background_convite.jpg"
+    },
+    {
       "Id": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\img\\convite.jpg",
       "PackagePath": "staticwebassets\\img\\convite.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\img\\coracao.png",
+      "PackagePath": "staticwebassets\\img\\coracao.png"
     },
     {
       "Id": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\lib\\bootstrap\\LICENSE",
