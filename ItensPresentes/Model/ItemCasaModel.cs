@@ -8,5 +8,6 @@
         public int Ambiente { get; set; }
         public List<string> NomePessoas { get; set; }
         public long Quantidade { get; set; }
+        public long PrimaryId { get; set; }
     }
 }
