@@ -40,13 +40,13 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVsYUFncmFkZWNpbWVudG9FcnJvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Área de Trabalho/Estudos/listalembrancas/ItensPresentes/Shared/ApresentacaoConvite.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEFwcmVzZW50YWNhb0NvbnZpdGUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/pedro/OneDrive/Área de Trabalho/Estudos/listalembrancas/ItensPresentes/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pedro/OneDrive/Área de Trabalho/Estudos/listalembrancas/ItensPresentes/Shared/ApresentacaoConvite.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEFwcmVzZW50YWNhb0NvbnZpdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-rtkrky9yme
 
 [C:/Users/pedro/OneDrive/Área de Trabalho/Estudos/listalembrancas/ItensPresentes/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
