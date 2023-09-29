@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CUrijwJL99VlCM2mQU0xsmYe+ZmMjd3HzE1DA0efp6w=",
+  "Hash": "znCHyEttTRixvDJPWDpvJ7yZiHYrHi1mGf7eC5vZpuE=",
   "Source": "ItensPresentes",
   "BasePath": "_content/ItensPresentes",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ItensPresentes.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\css\\_oldconvite.css",
+      "SourceId": "ItensPresentes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\",
+      "BasePath": "_content/ItensPresentes",
+      "RelativePath": "css/_oldconvite.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\_oldconvite.css"
     },
     {
       "Identity": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
@@ -100,40 +117,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\calendario.css"
-    },
-    {
-      "Identity": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\css\\convite.css",
-      "SourceId": "ItensPresentes",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\",
-      "BasePath": "_content/ItensPresentes",
-      "RelativePath": "css/convite.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\convite.css"
-    },
-    {
-      "Identity": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\css\\footer.css",
-      "SourceId": "ItensPresentes",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\",
-      "BasePath": "_content/ItensPresentes",
-      "RelativePath": "css/footer.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\footer.css"
     },
     {
       "Identity": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
@@ -323,6 +306,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
+      "Identity": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\html\\_oldconvite.html",
+      "SourceId": "ItensPresentes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\",
+      "BasePath": "_content/ItensPresentes",
+      "RelativePath": "html/_oldconvite.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\_oldconvite.html"
+    },
+    {
       "Identity": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\html\\calendario.html",
       "SourceId": "ItensPresentes",
       "SourceType": "Discovered",
@@ -338,23 +338,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\html\\calendario.html"
-    },
-    {
-      "Identity": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\html\\convite.html",
-      "SourceId": "ItensPresentes",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\",
-      "BasePath": "_content/ItensPresentes",
-      "RelativePath": "html/convite.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\html\\convite.html"
     },
     {
       "Identity": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\img\\background_convite.jpg",

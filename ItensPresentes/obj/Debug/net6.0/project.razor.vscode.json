@@ -23744,6 +23744,11 @@
       "FilePath": "c:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\Pages\\_Host.cshtml",
       "TargetPath": "Pages\\_Host.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\Pages\\Convite.razor",
+      "TargetPath": "Pages\\Convite.razor",
+      "FileKind": "component"
     }
   ]
 }
