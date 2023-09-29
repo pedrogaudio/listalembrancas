@@ -66,27 +66,27 @@ namespace ItensPresentes.Services
             {
                 if (item.Ambiente == 1)
                 {
-                    camaList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = camaInt, NomeItem = item.NomeItem });
+                    camaList.Add(new ItemCasaModel { PrimaryId = item.Id, Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = camaInt, NomeItem = item.NomeItem });
                     camaInt++;
                 }
                 else if (item.Ambiente == 2)
                 {
-                    mesaList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = mesaInt, NomeItem = item.NomeItem });
+                    mesaList.Add(new ItemCasaModel { PrimaryId = item.Id, Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = mesaInt, NomeItem = item.NomeItem });
                     mesaInt++;
                 }
                 else if (item.Ambiente == 3)
                 {
-                    banhoList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = banhoInt, NomeItem = item.NomeItem });
+                    banhoList.Add(new ItemCasaModel { PrimaryId = item.Id, Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = banhoInt, NomeItem = item.NomeItem });
                     banhoInt++;
                 }
                 else if (item.Ambiente == 4)
                 {
-                    eletroList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = eletroInt, NomeItem = item.NomeItem });
+                    eletroList.Add(new ItemCasaModel { PrimaryId = item.Id, Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = eletroInt, NomeItem = item.NomeItem });
                     eletroInt++;
                 }
                 else if (item.Ambiente == 5)
                 {
-                    cozinhaList.Add(new ItemCasaModel { Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = cozinhaInt, NomeItem = item.NomeItem });
+                    cozinhaList.Add(new ItemCasaModel { PrimaryId = item.Id, Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = cozinhaInt, NomeItem = item.NomeItem });
                     cozinhaInt++;
                 }
             }
@@ -103,7 +103,7 @@ namespace ItensPresentes.Services
             try
             {
                 long quantidade = 0;
-                var result = await _supabase.From<ItemDeCasa>().Filter("id", Operator.Equals, item.Id.ToString()).Get();
+                var result = await _supabase.From<ItemDeCasa>().Filter("id", Operator.Equals, item.PrimaryId.ToString()).Get();
 
                 ItemDeCasa? atual = result?.Models?.FirstOrDefault();
 
@@ -123,7 +123,7 @@ namespace ItensPresentes.Services
 
                 //atualizo
                 var update = await _supabase.From<ItemDeCasa>()
-                      .Where(x => x.Id == item.Id)
+                      .Where(x => x.Id == item.PrimaryId)
                       .Set(x => x.NomePessoas, pessoas)
                       .Set(x => x.Quantidade, quantidade == 0 ? item.Quantidade : quantidade)
                       .Set(x => x.Ativo, quantidade == 0 ? false : true)
