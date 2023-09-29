@@ -137,7 +137,7 @@ span {
     }
 
     .nomes-titles {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .principal-text {
@@ -146,11 +146,11 @@ span {
     }
 
     .O {
-        transform: translate(23px, 99px) rotate(337deg);
+        transform: translate(23px, 85px) rotate(337deg);
     }
 
     .p1 {
-        transform: translate(13px, 68px) rotate(339deg);
+        transform: translate(13px, 66px) rotate(339deg);
     }
 
     .e {
@@ -158,7 +158,28 @@ span {
     }
 
     .n {
-        transform: translate(2px, 46px) rotate(353deg);
+        transform: translate(5px, 48px) rotate(353deg);
+    }
+
+
+    .h {
+        transform: translate(4px, 50px) rotate(0deg);
+    }
+
+    .o2 {
+        transform: translate(2px, 51px) rotate(5deg);
+    }
+
+    .u {
+        transform: translate(-3px, 57px) rotate(20deg);
+    }
+
+    .s {
+        transform: translate(-8px, 67px) rotate(25deg);
+    }
+
+    .e2 {
+        transform: translate(-15px, 80px) rotate(33deg);
     }
 }
 
