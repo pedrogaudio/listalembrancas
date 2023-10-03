@@ -10,8 +10,11 @@ namespace ItensPresentes.Services
     public interface ISupabaseService
     {
         Task InitializeAsync();
-        Task<Tuple<List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>>> GetItensDeCasaAsync();
+        Task<List<ItemCasaModel>> GetItensDeCasaAsync();
+        Task<List<ItemCasaModel>> GetItensDeCasaAsync(int id);
         Task<bool> UpdateItemDeCasa(ItemCasaModel item);
+        Task<List<ItemCasaModel>> GetPaginatedResult(int currentPage, int pageSize = 10);
+        Task<int> GetCount();
     }
 
     public class SupabaseService : ISupabaseService
@@ -33,68 +36,47 @@ namespace ItensPresentes.Services
             await _supabase.InitializeAsync();
         }
 
-        public async Task<Tuple<List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>>> GetItensDeCasaAsync()
+        public async Task<List<ItemCasaModel>> GetPaginatedResult(int currentPage, int pageSize = 10)
         {
-            var result = await _supabase.From<ItemDeCasa>().Filter("ativo", Operator.Equals, "true").Get();
-            var response = result.Models.OrderBy(x => x.Id);
-
-            var listaModelada = GetListModelada(response.ToList());
-            var camaLista = listaModelada.Item1.OrderBy(x => x.Id).ToList();
-            var mesaLista = listaModelada.Item2.OrderBy(x => x.Id).ToList();
-            var banhoLista = listaModelada.Item3.OrderBy(x => x.Id).ToList();
-            var eletroLista = listaModelada.Item4.OrderBy(x => x.Id).ToList();
-            var cozinhaLista = listaModelada.Item5.OrderBy(x => x.Id).ToList();
-
-            return new Tuple<List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>>(camaLista, mesaLista, banhoLista, eletroLista, cozinhaLista);
+            var data = await GetItensDeCasaAsync();
+            return data.OrderBy(d => d.Id).Skip((currentPage - 1) * pageSize).Take(pageSize).ToList();
         }
 
-        private Tuple<List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>> GetListModelada(List<ItemDeCasa> itemDeCasas)
+        public async Task<int> GetCount()
         {
-            // Crie as cinco listas
-            var camaList = new List<ItemCasaModel>();
-            var mesaList = new List<ItemCasaModel>();
-            var banhoList = new List<ItemCasaModel>();
-            var eletroList = new List<ItemCasaModel>();
-            var cozinhaList = new List<ItemCasaModel>();
+            var data = await GetItensDeCasaAsync();
+            return data.Count;
+        }
 
-            int camaInt = 0;
-            int mesaInt = 0;
-            int banhoInt = 0;
-            int eletroInt = 0;
-            int cozinhaInt = 0;
+        public async Task<List<ItemCasaModel>> GetItensDeCasaAsync()
+        {
+            var result = await _supabase.From<ItemDeCasa>().Filter("ativo", Operator.Equals, "true").Get();
+            var response = result.Models.OrderBy(x => x.NomeItem);
+
+            return GetListModelada(response.ToList());
+        }
+
+        public async Task<List<ItemCasaModel>> GetItensDeCasaAsync(int id)
+        {
+            var result = await _supabase.From<ItemDeCasa>().Filter("id", Operator.Equals, id.ToString()).Get();
+            var response = result.Models.OrderBy(x => x.NomeItem);
+
+            return GetListModelada(response.ToList());
+        }
+
+        private List<ItemCasaModel> GetListModelada(List<ItemDeCasa> itemDeCasas)
+        {
+            var result = new List<ItemCasaModel>();
+
+            int nro = 0;
+
             foreach (var item in itemDeCasas)
             {
-                if (item.Ambiente == 1)
-                {
-                    camaList.Add(new ItemCasaModel { PrimaryId = item.Id, Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = camaInt, NomeItem = item.NomeItem });
-                    camaInt++;
-                }
-                else if (item.Ambiente == 2)
-                {
-                    mesaList.Add(new ItemCasaModel { PrimaryId = item.Id, Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = mesaInt, NomeItem = item.NomeItem });
-                    mesaInt++;
-                }
-                else if (item.Ambiente == 3)
-                {
-                    banhoList.Add(new ItemCasaModel { PrimaryId = item.Id, Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = banhoInt, NomeItem = item.NomeItem });
-                    banhoInt++;
-                }
-                else if (item.Ambiente == 4)
-                {
-                    eletroList.Add(new ItemCasaModel { PrimaryId = item.Id, Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = eletroInt, NomeItem = item.NomeItem });
-                    eletroInt++;
-                }
-                else if (item.Ambiente == 5)
-                {
-                    cozinhaList.Add(new ItemCasaModel { PrimaryId = item.Id, Quantidade = item.Quantidade, NomePessoas = item.NomePessoas, Ambiente = item.Ambiente, Ativo = true, Id = cozinhaInt, NomeItem = item.NomeItem });
-                    cozinhaInt++;
-                }
+                result.Add(new ItemCasaModel { Id = nro, Ativo = item.Ativo, Link = item.Link, NomeItem = item.NomeItem, PrimaryId = item.Id, Quantidade = item.Quantidade, NomePessoas = item.NomePessoas });
+                nro++;
             }
             // Crie e retorne a tupla com as listas preenchidas
-            var tuple = new Tuple<List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>, List<ItemCasaModel>>(
-                camaList, mesaList, banhoList, eletroList, cozinhaList);
-
-            return tuple;
+            return result;
         }
 
         public async Task<bool> UpdateItemDeCasa(ItemCasaModel item)

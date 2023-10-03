@@ -54,7 +54,7 @@ th {
 @media (max-width: 358px) {
     .heart {
         background-size: 37px 36px;
-        background-position: -2px -3px;
+        background-position: 1px -6px;
     }
 }
 

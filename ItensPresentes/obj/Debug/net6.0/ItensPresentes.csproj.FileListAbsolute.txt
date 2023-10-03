@@ -49,3 +49,4 @@ C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\ItensPresentes.pdb
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\ItensPresentes.genruntimeconfig.cache
 C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\ref\ItensPresentes.dll
+C:\Users\pedro\OneDrive\Área de Trabalho\Estudos\listalembrancas\ItensPresentes\obj\Debug\net6.0\scopedcss\Pages\TelaAgradecimento.razor.rz.scp.css

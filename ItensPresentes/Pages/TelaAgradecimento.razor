@@ -1,23 +1,47 @@
-﻿@page "/TelaAgradecimento/{nomePresenteador}"
+﻿@page "/TelaAgradecimento/{nomePresenteador}/{PrimaryId}"
+@using ItensPresentes.Model;
+@using ItensPresentes.Services;
+@inject ISupabaseService SupabaseService
+@inject Microsoft.AspNetCore.Components.NavigationManager NavigationManager
 
-<h3>Obrigado!</h3>
-<br />
-<br />
-<p>Oi, <strong>@nomePresenteador</strong>, agradecemos muito pela sua disponibilidade em compartilhar esse momento conosco!</p>
-<br />
-<p>Te esperamos no dia 16/12/2023 às 15:00.</p>
-<br />
-<p>Avenida Rudge Ramos, 1174 - São Bernardo do Campo, SP</p>
-<br />
-<p>Pedro, Raiany, Isabella e Giovanna.</p>
-
+<div style="background-image: url('/img/background_convite.jpg');margin-top: -30px; margin-left: -30px; margin-right: -10px">
+    <!--<div style="background-image: url('/img/background_convite.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: -30px; margin-left: -30px; margin-right: -10px; height: 100vh;">
+    -->
+    <h2 class="nomes-titles">Obrigado!</h2>
+    <div class="principal-text">
+        <br />
+        <p>Oi, <strong>@nomePresenteador</strong>, agradecemos muito pela sua disponibilidade em compartilhar esse momento conosco!</p>
+        @if (!String.IsNullOrEmpty(Link))
+        {
+            <p>Só gostaríamos de salientar que para este item, temos um modelo específico que você pode conferir abaixo:</p>
+            <a href="@Link" target="_blank">@NomeItem</a>
+            <br />
+            <p>Isto é por causa das medidas dos móveis planejados. Caso não se sinta confortável com algo, pode nos procurar.</p>
+        }
+        <br />
+        <p>Te esperamos no dia 16/12/2023 às 15:00.</p>
+        <br />
+        <p>Avenida Rudge Ramos, 1174 - São Bernardo do Campo, SP</p>
+        <br />
+        <p>Pedro, Raiany, Isabella e Giovanna.</p>
+    </div>
+</div>
 
 @code {
     [Parameter]
     public string nomePresenteador { get; set; }
+    [Parameter]
+    public string PrimaryId { get; set; }
 
-    protected override void OnInitialized()
+    public string Link { get; set; }
+    public string NomeItem { get; set; }
+    private ApresentationItensCasaModel apresentationItensCasaModel = new ApresentationItensCasaModel(); // Inicialize o objeto aqui
+
+
+    protected override async Task OnInitializedAsync()
     {
-        // O valor do parâmetro 'nomePresenteador' é automaticamente vinculado à propriedade
+        apresentationItensCasaModel.Data = await SupabaseService.GetItensDeCasaAsync(Convert.ToInt32(PrimaryId));
+        Link = apresentationItensCasaModel.Data.First().Link;
+        NomeItem = apresentationItensCasaModel.Data.First().NomeItem;
     }
 }

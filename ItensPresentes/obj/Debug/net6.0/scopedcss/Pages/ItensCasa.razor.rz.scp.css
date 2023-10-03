@@ -11,3 +11,276 @@
 .nav-link[b-ghefgpor2t] {
     cursor: pointer;
 }
+
+body[b-ghefgpor2t] {
+    margin-top: 20px;
+}
+
+.event-schedule-area .section-title .title-text[b-ghefgpor2t] {
+    margin-bottom: 50px;
+}
+
+.event-schedule-area .tab-area .nav-tabs[b-ghefgpor2t] {
+    border-bottom: inherit;
+}
+
+.event-schedule-area .tab-area .nav[b-ghefgpor2t] {
+    border-bottom: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.event-schedule-area .tab-area .nav-item[b-ghefgpor2t] {
+    margin-bottom: 75px;
+}
+
+    .event-schedule-area .tab-area .nav-item .nav-link[b-ghefgpor2t] {
+        text-align: center;
+        font-size: 22px;
+        color: #333;
+        font-weight: 600;
+        border-radius: inherit;
+        border: inherit;
+        padding: 0px;
+        text-transform: capitalize !important;
+    }
+
+        .event-schedule-area .tab-area .nav-item .nav-link.active[b-ghefgpor2t] {
+            color: #4125dd;
+            background-color: transparent;
+        }
+
+.event-schedule-area .tab-area .tab-content .table[b-ghefgpor2t] {
+    margin-bottom: 0;
+    width: 80%;
+}
+
+    .event-schedule-area .tab-area .tab-content .table thead td[b-ghefgpor2t],
+    .event-schedule-area .tab-area .tab-content .table thead th[b-ghefgpor2t] {
+        border-bottom-width: 1px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #252525;
+    }
+
+    .event-schedule-area .tab-area .tab-content .table td[b-ghefgpor2t],
+    .event-schedule-area .tab-area .tab-content .table th[b-ghefgpor2t] {
+        border: 1px solid #b7b7b7;
+        padding-left: 30px;
+    }
+
+    .event-schedule-area .tab-area .tab-content .table tbody th .heading[b-ghefgpor2t],
+    .event-schedule-area .tab-area .tab-content .table tbody td .heading[b-ghefgpor2t] {
+        font-size: 16px;
+        text-transform: capitalize;
+        margin-bottom: 16px;
+        font-weight: 500;
+        color: #252525;
+        margin-bottom: 6px;
+    }
+
+    .event-schedule-area .tab-area .tab-content .table tbody th span[b-ghefgpor2t],
+    .event-schedule-area .tab-area .tab-content .table tbody td span[b-ghefgpor2t] {
+        color: #4125dd;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        display: block;
+    }
+
+        .event-schedule-area .tab-area .tab-content .table tbody th span.date[b-ghefgpor2t],
+        .event-schedule-area .tab-area .tab-content .table tbody td span.date[b-ghefgpor2t] {
+            color: #656565;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+
+    .event-schedule-area .tab-area .tab-content .table tbody th p[b-ghefgpor2t] {
+        font-size: 14px;
+        margin: 0;
+        font-weight: normal;
+    }
+
+.event-schedule-area-two .section-title .title-text h2[b-ghefgpor2t] {
+    margin: 0px 0 15px;
+}
+
+.event-schedule-area-two ul.custom-tab[b-ghefgpor2t] {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 30px;
+}
+
+    .event-schedule-area-two ul.custom-tab li[b-ghefgpor2t] {
+        margin-right: 70px;
+        position: relative;
+    }
+
+        .event-schedule-area-two ul.custom-tab li a[b-ghefgpor2t] {
+            color: #252525;
+            font-size: 25px;
+            line-height: 25px;
+            font-weight: 600;
+            text-transform: capitalize;
+            padding: 35px 0;
+            position: relative;
+        }
+
+            .event-schedule-area-two ul.custom-tab li a:hover[b-ghefgpor2t]:before {
+                width: 100%;
+            }
+
+            .event-schedule-area-two ul.custom-tab li a[b-ghefgpor2t]:before {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                content: "";
+                background: #4125dd;
+                width: 0;
+                height: 2px;
+                -webkit-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                transition: all 0.4s;
+            }
+
+            .event-schedule-area-two ul.custom-tab li a.active[b-ghefgpor2t] {
+                color: #4125dd;
+            }
+
+.event-schedule-area-two .primary-btn[b-ghefgpor2t] {
+}
+
+.event-schedule-area-two .tab-content .table[b-ghefgpor2t] {
+    -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+}
+
+    .event-schedule-area-two .tab-content .table thead[b-ghefgpor2t] {
+        background-color: #6f42c1;
+        color: #fff;
+        font-size: 20px;
+    }
+
+        .event-schedule-area-two .tab-content .table thead tr th[b-ghefgpor2t] {
+            padding: 20px;
+            border: 0;
+        }
+
+    .event-schedule-area-two .tab-content .table tbody[b-ghefgpor2t] {
+        background: #fff;
+    }
+
+        .event-schedule-area-two .tab-content .table tbody tr.inner-box[b-ghefgpor2t] {
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .event-schedule-area-two .tab-content .table tbody tr th[b-ghefgpor2t] {
+            border: 0;
+            padding: 30px 20px;
+            vertical-align: middle;
+        }
+
+            .event-schedule-area-two .tab-content .table tbody tr th .event-date[b-ghefgpor2t] {
+                color: #252525;
+                text-align: center;
+            }
+
+                .event-schedule-area-two .tab-content .table tbody tr th .event-date span[b-ghefgpor2t] {
+                    font-size: 50px;
+                    line-height: 50px;
+                    font-weight: normal;
+                }
+
+        .event-schedule-area-two .tab-content .table tbody tr td[b-ghefgpor2t] {
+            padding: 30px 20px;
+            vertical-align: middle;
+        }
+
+            .event-schedule-area-two .tab-content .table tbody tr td .r-no span[b-ghefgpor2t] {
+                color: #252525;
+            }
+
+            .event-schedule-area-two .tab-content .table tbody tr td .event-wrap h3 a[b-ghefgpor2t] {
+                font-size: 20px;
+                line-height: 20px;
+                color: #cf057c;
+                -webkit-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                transition: all 0.4s;
+            }
+
+                .event-schedule-area-two .tab-content .table tbody tr td .event-wrap h3 a:hover[b-ghefgpor2t] {
+                    color: #4125dd;
+                }
+
+            .event-schedule-area-two .tab-content .table tbody tr td .event-wrap .categories[b-ghefgpor2t] {
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                margin: 10px 0;
+            }
+
+                .event-schedule-area-two .tab-content .table tbody tr td .event-wrap .categories a[b-ghefgpor2t] {
+                    color: #252525;
+                    font-size: 16px;
+                    margin-left: 10px;
+                    -webkit-transition: all 0.4s;
+                    -o-transition: all 0.4s;
+                    transition: all 0.4s;
+                }
+
+                    .event-schedule-area-two .tab-content .table tbody tr td .event-wrap .categories a[b-ghefgpor2t]:before {
+                        content: "\f07b";
+                        font-family: fontawesome;
+                        padding-right: 5px;
+                    }
+
+            .event-schedule-area-two .tab-content .table tbody tr td .event-wrap .time span[b-ghefgpor2t] {
+                color: #252525;
+            }
+
+            .event-schedule-area-two .tab-content .table tbody tr td .event-wrap .organizers[b-ghefgpor2t] {
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                margin: 10px 0;
+            }
+
+                .event-schedule-area-two .tab-content .table tbody tr td .event-wrap .organizers a[b-ghefgpor2t] {
+                    color: #4125dd;
+                    font-size: 16px;
+                    -webkit-transition: all 0.4s;
+                    -o-transition: all 0.4s;
+                    transition: all 0.4s;
+                }
+
+                    .event-schedule-area-two .tab-content .table tbody tr td .event-wrap .organizers a:hover[b-ghefgpor2t] {
+                        color: #4125dd;
+                    }
+
+                    .event-schedule-area-two .tab-content .table tbody tr td .event-wrap .organizers a[b-ghefgpor2t]:before {
+                        content: "\f007";
+                        font-family: fontawesome;
+                        padding-right: 5px;
+                    }
+
+            .event-schedule-area-two .tab-content .table tbody tr td .primary-btn[b-ghefgpor2t] {
+                margin-top: 0;
+                text-align: center;
+            }
+
+            .event-schedule-area-two .tab-content .table tbody tr td .event-img img[b-ghefgpor2t] {
+                width: 100px;
+                height: 100px;
+                border-radius: 8px;
+            }

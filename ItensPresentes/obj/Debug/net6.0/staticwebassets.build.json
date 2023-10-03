@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "znCHyEttTRixvDJPWDpvJ7yZiHYrHi1mGf7eC5vZpuE=",
+  "Hash": "Am92JFwAkOgPCmfm6MUDaKvBfDJppqAwUgQJQm8BIY4=",
   "Source": "ItensPresentes",
   "BasePath": "_content/ItensPresentes",
   "Mode": "Default",
@@ -355,23 +355,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\background_convite.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\img\\convite.jpg",
-      "SourceId": "ItensPresentes",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\",
-      "BasePath": "_content/ItensPresentes",
-      "RelativePath": "img/convite.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\convite.jpg"
     },
     {
       "Identity": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\listalembrancas\\ItensPresentes\\wwwroot\\img\\coracao.png",
