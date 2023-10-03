@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <None Include="wwwroot\html\calendario.html" />
-    <None Include="wwwroot\img\convite.jpg" />
   </ItemGroup>
 
 </Project>

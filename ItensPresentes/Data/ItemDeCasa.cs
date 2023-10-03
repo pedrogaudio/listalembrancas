@@ -20,6 +20,8 @@ namespace ItensPresentes.Data
         public bool Ativo { get; set; }
         [Column("ambiente")]
         public int Ambiente { get; set; }
+        [Column("link")]
+        public string Link { get; set; }
 
     }
 }

@@ -55,11 +55,11 @@
         // Verifique o resultado
         if (sucesso)
         {
-            NavigationManager.NavigateTo($"/TelaAgradecimento/{nomePresenteador}");
+            NavigationManager.NavigateTo($"/TelaAgradecimento/{nomePresenteador}/{ItemDeCasa.PrimaryId}");
         }
         else
         {
-            NavigationManager.NavigateTo($"/TelaAgradecimentoErro/{ItemDeCasa.Id}"); ;
+            NavigationManager.NavigateTo($"/TelaAgradecimentoErro/{ItemDeCasa.PrimaryId}/{nomePresenteador}"); ;
         }
     }
 }
