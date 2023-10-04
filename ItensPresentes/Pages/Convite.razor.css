@@ -45,23 +45,23 @@
 }
 
 .h {
-    transform: translate(4px, 50px) rotate(0deg);
+    transform: translate(9px, 46px) rotate(360deg);
 }
 
 .o2 {
-    transform: translate(2px, 51px) rotate(5deg);
+    transform: translate(8px, 47px) rotate(5deg);
 }
 
 .u {
-    transform: translate(-2px, 58px) rotate(16deg);
+    transform: translate(0px, 54px) rotate(7deg);
 }
 
 .s {
-    transform: translate(-8px, 70px) rotate(22deg);
+    transform: translate(-9px, 69px) rotate(9deg);
 }
 
 .e2 {
-    transform: translate(-17px, 83px) rotate(30deg);
+    transform: translate(-16px, 83px) rotate(11deg);
 }
 
 span {
@@ -146,24 +146,24 @@ span {
     }
 
     .O {
-        transform: translate(23px, 85px) rotate(337deg);
+        transform: translate(26px, 82px) rotate(330deg);
     }
 
     .p1 {
-        transform: translate(13px, 66px) rotate(339deg);
+        transform: translate(15px, 63px) rotate(336deg);
     }
 
     .e {
-        transform: translate(8px, 56px) rotate(343deg);
+        transform: translate(9px, 54px) rotate(346deg);
     }
 
     .n {
-        transform: translate(5px, 48px) rotate(353deg);
+        transform: translate(5px, 48px) rotate(351deg);
     }
 
 
     .h {
-        transform: translate(4px, 50px) rotate(0deg);
+        transform: translate(7px, 48px) rotate(0deg);
     }
 
     .o2 {
