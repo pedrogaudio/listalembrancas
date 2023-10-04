@@ -4,7 +4,7 @@
 @inject ISupabaseService SupabaseService
 @inject Microsoft.AspNetCore.Components.NavigationManager NavigationManager
 
-<div style="background-image: url('/img/background_convite.jpg');margin-top: -30px; margin-left: -30px; margin-right: -10px">
+<div style="background-image: url('/img/background_convite.jpg'); margin-top: -10px; margin-left: -10px; margin-right: -10px; background-size: cover;  height: 130vh;">   
     <!--<div style="background-image: url('/img/background_convite.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: -30px; margin-left: -30px; margin-right: -10px; height: 100vh;">
     -->
     <h2 class="nomes-titles">Obrigado!</h2>
@@ -15,6 +15,7 @@
         {
             <p>Só gostaríamos de salientar que para este item, temos um modelo específico que você pode conferir abaixo:</p>
             <a href="@Link" target="_blank">@NomeItem</a>
+            <br />
             <br />
             <p>Isto é por causa das medidas dos móveis planejados. Caso não se sinta confortável com algo, pode nos procurar.</p>
         }
