@@ -1,0 +1,47 @@
+﻿@page "/TelaConfirmacao/{nome}/{quantidade}"
+
+@if (Convert.ToInt32(quantidade) > 1)
+{
+    <div >
+        <!--<div style="background-image: url('/img/background_convite.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: -30px; margin-left: -30px; margin-right: -10px; height: 100vh;">     -->
+        <h3>Tudo certo!</h3>
+        <br />
+        <br />
+        <p>Oi, <strong>@nome</strong> e família,</p>
+        <br />
+        <p>Agradecemos pela confirmação.</p>
+        <br />
+        <p>Te esperamos no dia 16/12/2023 às 15:00.</p>
+        <br />
+        <p>Avenida Rudge Ramos, 1174 - São Bernardo do Campo, SP</p>
+        <p>Salão de Festas</p>
+        <br />
+        <p>Pedro, Raiany, Isabella e Giovanna.</p>
+    </div>
+}
+else
+{
+    <div >
+        <!--<div style="background-image: url('/img/background_convite.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: -30px; margin-left: -30px; margin-right: -10px; height: 100vh;">     -->
+        <h3>Tudo certo!</h3>
+        <br />
+        <br />
+        <p>Oi, <strong>@nome</strong>,</p>
+        <br />
+        <p>Agradecemos pela confirmação.</p>
+        <br />
+        <p>Te esperamos no dia 16/12/2023 às 15:00.</p>
+        <br />
+        <p>Avenida Rudge Ramos, 1174 - São Bernardo do Campo, SP</p>
+        <p>Salão de Festas</p>
+        <br />
+        <p>Pedro, Raiany, Isabella e Giovanna.</p>
+    </div>
+
+}
+@code {
+    [Parameter]
+    public string nome { get; set; }
+    [Parameter]
+    public string quantidade { get; set; }
+}

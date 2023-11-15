@@ -32,6 +32,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVsYUFncmFkZWNpbWVudG9FcnJvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/pedro/OneDrive/Área de Trabalho/Estudos/listalembrancas/ItensPresentes/Pages/TelaConfirmacao.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVsYUNvbmZpcm1hY2FvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pedro/OneDrive/Área de Trabalho/Estudos/listalembrancas/ItensPresentes/Pages/TelaConfirmacaoErro.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVsYUNvbmZpcm1hY2FvRXJyby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/pedro/OneDrive/Área de Trabalho/Estudos/listalembrancas/ItensPresentes/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -43,6 +51,10 @@ build_metadata.AdditionalFiles.CssScope = b-pkaclo3485
 [C:/Users/pedro/OneDrive/Área de Trabalho/Estudos/listalembrancas/ItensPresentes/Pages/ItensCasa.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXRlbnNDYXNhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-ghefgpor2t
+
+[C:/Users/pedro/OneDrive/Área de Trabalho/Estudos/listalembrancas/ItensPresentes/Pages/Presenca.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJlc2VuY2EucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-gpy6zwy9zr
 
 [C:/Users/pedro/OneDrive/Área de Trabalho/Estudos/listalembrancas/ItensPresentes/Pages/TelaAgradecimento.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVsYUFncmFkZWNpbWVudG8ucmF6b3I=

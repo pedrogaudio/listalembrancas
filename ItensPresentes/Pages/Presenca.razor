@@ -1,0 +1,122 @@
+﻿@page "/presenca"
+@using ItensPresentes.Model;
+@using ItensPresentes.Services;
+@inject Microsoft.AspNetCore.Components.NavigationManager NavigationManager
+@inject ISupabaseService SupabaseService
+
+<h3>Lista de Presença</h3>
+
+<br />
+
+<div class="principal-text">
+    <p>Pedimos que confirme sua presença.</p>
+    <p>Basta adicionar o seu nome e de seus acompanhantes. Precisamos do RG para deixarmos na portaria.</p>
+</div>
+<br />
+
+<div class="form-group">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" @bind="nome" class="form-control @(nomeCssClass)" />
+    <div class="validation-message" style="color:red; display:@(nomeInvalido ? "block" : "none")">O campo Nome é obrigatório.</div>
+    <br />
+    <label for="rg">RG:</label>
+    <input type="text" id="rg" @bind="rg" class="form-control @(rgCssClass)" />
+    <div class="validation-message" style="color:red; display:@(rgInvalido ? "block" : "none")">O campo RG é obrigatório.</div>
+    <br />
+    <button class="btn btn-primary" @onclick="AdicionarParticipante">Adicionar</button>
+    <button class="btn btn-secondary" @onclick="LimparCampos">Limpar</button>
+</div>
+<br />
+<br />
+
+<div style="@(participantes.Count > 0 ? "" : "display:none")">
+    <h4>Nomes:</h4>
+    <ul>
+        @foreach (var participante in participantes)
+        {
+            <li>@($"{participante.Nome} - {participante.RG}")</li>
+        }
+    </ul>
+</div>
+
+<br />
+
+<div class="text-save" style="@(participantes.Count > 0 ? "" : "display:none")">
+    <p>
+        Agora é só clicar em salvar para confirmar.
+    </p>
+</div>
+
+<button class="btn btn-success" @onclick="SalvarParticipantes" style="@(participantes.Count > 0 ? "" : "display:none")">Salvar</button>
+
+@code {
+    private string nome = "";
+    private string rg = "";
+    private List<ListaPresencaModel> participantes = new List<ListaPresencaModel>();
+
+    // Variáveis para controlar as classes de estilo para feedback visual
+    private string nomeCssClass = "";
+    private string rgCssClass = "";
+
+    // Variáveis para controlar a visibilidade das mensagens de validação
+    private bool nomeInvalido = false;
+    private bool rgInvalido = false;
+
+    private void AdicionarParticipante()
+    {
+        // Resetar visibilidade das mensagens de validação
+        nomeInvalido = false;
+        rgInvalido = false;
+
+        // Validar se os campos obrigatórios estão preenchidos
+        if (string.IsNullOrWhiteSpace(nome))
+        {
+            nomeCssClass = "is-invalid";
+            nomeInvalido = true;
+        }
+        else
+        {
+            nomeCssClass = "";
+        }
+
+        if (string.IsNullOrWhiteSpace(rg))
+        {
+            rgCssClass = "is-invalid";
+            rgInvalido = true;
+        }
+        else
+        {
+            rgCssClass = "";
+        }
+
+        // Adicionar participante apenas se os campos obrigatórios estiverem preenchidos
+        if (!nomeInvalido && !rgInvalido)
+        {
+            ListaPresencaModel p = new ListaPresencaModel { Nome = nome, RG = rg };
+            participantes.Add(p);
+            nome = ""; // Limpa o campo de nome
+            rg = ""; // Limpa o campo de acompanhamento
+        }
+    }
+
+    private async Task SalvarParticipantes()
+    {
+        var nome = participantes.Select(x => x.Nome).FirstOrDefault();
+        var quantidade = participantes.Count();
+        bool sucesso = await SupabaseService.InsertNomeListaPresencaList(participantes);
+        if (sucesso)
+            NavigationManager.NavigateTo($"/TelaConfirmacao/{nome}/{quantidade}");
+        else 
+            NavigationManager.NavigateTo($"/TelaConfirmacaoErro/{nome}/{quantidade}");
+    }
+
+        private void LimparCampos()
+    {
+        nome = "";
+        rg = "";
+        nomeCssClass = "";
+        rgCssClass = "";
+        nomeInvalido = false;
+        rgInvalido = false;
+    }
+}

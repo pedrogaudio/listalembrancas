@@ -23,8 +23,3 @@ insert into public.itenscasa (quantidade, nome_itens, ambiente)	values (1,'Lixei
 insert into public.itenscasa (quantidade, nome_itens, ambiente)	values (1,'Jogo de lençóis (queen)',  1);
 insert into public.itenscasa (quantidade, nome_itens, ambiente)	values (1,'Jogo de lençóis (solteiro infantil)',  1);
 
-1 - Cama
-2 - Mesa
-3 - Banho
-4 - Eletrodomésticos
-5 - Cozinha

@@ -15,6 +15,8 @@ namespace ItensPresentes.Services
         Task<bool> UpdateItemDeCasa(ItemCasaModel item);
         Task<List<ItemCasaModel>> GetPaginatedResult(int currentPage, int pageSize = 10);
         Task<int> GetCount();
+        Task<bool> InsertNomeListaPresenca(ListaPresencaModel item);
+        Task<bool> InsertNomeListaPresencaList(List<ListaPresencaModel> itens);
     }
 
     public class SupabaseService : ISupabaseService
@@ -112,13 +114,68 @@ namespace ItensPresentes.Services
                       .Set(x => x.Ativo, quantidade == 0 ? false : true)
                       .Update();
 
-                if (update.ResponseMessage.StatusCode == System.Net.HttpStatusCode.OK)
+                if (update?.ResponseMessage?.StatusCode == System.Net.HttpStatusCode.OK)
                     sucesso = true;
             }
             catch (Exception ex)
             {
                 var teste = ex.Message;
             }
+            return sucesso;
+        }
+
+        public async Task<bool> InsertNomeListaPresenca(ListaPresencaModel item)
+        {
+            bool sucesso = false;
+            try
+            {
+                var model = new ListaPresenca
+                {
+                    Nome = item.Nome,
+                    RG = item.RG,
+                };
+
+                var insert = await _supabase.From<ListaPresenca>().Insert(model);
+
+                if (insert?.ResponseMessage?.StatusCode == System.Net.HttpStatusCode.OK)
+                    sucesso = true;
+
+            }
+            catch (Exception ex)
+            {
+                var teste = ex.Message;
+            }
+            return sucesso;
+        }
+
+        public async Task<bool> InsertNomeListaPresencaList(List<ListaPresencaModel> itens)
+        {
+            bool sucesso = false;
+            try
+            {
+                foreach (var item in itens)
+                {
+                    var model = new ListaPresenca
+                    {
+                        Nome = item.Nome,
+                        RG = item.RG
+                    };
+
+                    var insert = await _supabase.From<ListaPresenca>().Insert(model);
+
+                    if (insert?.ResponseMessage?.StatusCode == System.Net.HttpStatusCode.Created)
+                        sucesso = true;
+                    else { 
+                        sucesso = false;
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var teste = ex.Message;
+            }
+
             return sucesso;
         }
     }
